@@ -1,0 +1,41 @@
+{
+  "name": "@reneturcios/tubedata",
+  "version": "0.1.0",
+  "description": "YouTube data as JSON from your agent: a local bridge to the hosted HasData YouTube MCP service that searches videos, fetches video and channel details, and returns full transcripts. One bin serves a small CLI and a stdio MCP server.",
+  "mcpName": "io.github.CloudCorpRecords/tubedata",
+  "type": "module",
+  "bin": {
+    "tubedata": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCorpRecords/tubedata.git"
+  },
+  "homepage": "https://github.com/CloudCorpRecords/tubedata#readme",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}
